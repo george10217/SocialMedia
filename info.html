@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Social Media &copy; | Info</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /><!--this is where the Animation on Scroll is linked from the internet-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!--this is where the styles for the AOS is linked-->
+     <link rel="shortcut icon" type = image/png href="Images/webTab.png"> <!--adds logo to webpage tab-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!--links to jQuery-->
+    <script type= "text/javascript" src="js/script.js"></script><!this is where the external javascript file is linked>
+
+
+    
+</head>
+
+
+
+<body bgcolor=#00aec1>
+    <img id=logo src="Images/SMicon.png"style="width:300px; left:40%; position:absolute; margin-top: -5px;"data-aos="zoom-in-down" data-aos-duration="1500" data-aos-once="true"><!--Centre Company Logo-->
+
+
+<div id="menucont">
+
+<span class="slide">
+      <a href="#" onclick="openSlideMenu();">
+    <img id=navButton src="Images/barIcon.png"data-aos="fade-right" data-aos-duration="3500" data-aos-once="true" style="width:50px; cursor:pointer; -moz-transition: transform 1s;-webkit-transition: transform 1s;transition: transform 1s; margin-top: 5px; position: absolute;"><!--Three Line button-->
+
+      </a>
+    </span>
+<div id="menu" class="nav">
+      <a href="#" class="close" onclick="closeSlideMenu();">
+        <i class="fas fa-times"></i>
+      </a>
+      <a href="index.html">Home</a>
+      <a href="upload.html">Upload</a>
+      <a href="info.html">Info</a>
+      <a href="data.html">Data</a>
+
+
+  </div>
+
+    <h2 data-aos="zoom-in-down" data-aos-duration="1500" data-aos-once="true">Information</h2>
+    <h3 style="margin-left: 450px; margin-top: 320px; position: absolute;"data-aos="zoom-in-up" data-aos-duration="1500" data-aos-once="true">Welcome, this website is designed to teach corporate investors how to
+    use social media as a tool for marketing. We here at social media believe that the best way to reach out to your customers is through social media.
+    Through Social media you can rise to the top and sleep on piles of cash - Social Media ©
+    </h3>
+    
+    <div id="money" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
+        <img src="images/money.png">
+    </div>
+
+    <div id="advert" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">
+        <img src="images/advert.png">
+    </div>
+    
+
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+      
+      List();
+    </script>
+    <script>navBtn();</script>
+
+</body>
+</html>

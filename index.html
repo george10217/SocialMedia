@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Social Media &copy; | Home</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /><!--this is where the Animation on Scroll is linked from the internet-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!--this is where the styles for the AOS is linked-->
+     <link rel="shortcut icon" type = image/png href="Images/webTab.png"> <!--adds logo to webpage tab-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!--links to jQuery-->
+    <script type= "text/javascript" src="js/script.js"></script><!this is where the external javascript file is linked>
+
+    
+    
+</head>
+<body>
+<div id="welMsg" data-aos="zoom-in-up" data-aos-duration="1500" data-aos-once="true">
+    <div id="welMsgtxt">Hello, Welcome to 'Social Media'. This website was designed to help YOU use social media
+    to your advantage and make greater profits for your organisation. We understand that the main stockholders who
+    will be coming to us for help will mostly be major members of a marketing team. So to help you navigate through
+    this website just use the menu (three bars) on the side to learn more on how we can help you. – Social Media ©</div>
+    <div id="button1" onClick='popClose();'>Get started</div>
+</div>
+<div id="wrapper"></div>
+<div class="E1">
+            <div class="bye"></div>
+        </div>
+
+<div class="E2">
+            <div class="no"></div>
+        </div>
+
+<div class="E3">
+            <div class="yes"></div>
+        </div>
+
+<div class="E4">
+            <div class="said"></div>
+        </div>
+
+<div class="E5">
+            <div class="smile"></div>
+        </div>
+
+<div class="E6">
+            <div class="yellow"></div>
+        </div>
+
+    <img id=indexMan src="Images/background.png" style="width:500px; left:33%; top:65%; position:absolute; margin-top: 10px;"><!--Man at bottom-->
+    <img id=logo src="Images/SMicon.png"style="width:300px; left:40%; position:absolute; margin-top: -775px;"data-aos="zoom-in-down" data-aos-duration="1500" data-aos-once="true"><!--Centre Company Logo-->
+
+<div id="menucont">
+
+<span class="slide">
+      <a href="#" onclick="openSlideMenu();">
+    <img id=navButton src="Images/barIcon.png"data-aos="fade-right" data-aos-duration="3500" data-aos-once="true" style="width:50px; cursor:pointer; -moz-transition: transform 1s;-webkit-transition: transform 1s;transition: transform 1s; margin-top: -760px; position: absolute;"><!--Three Line button-->
+
+      </a>
+    </span>
+<div id="menu" class="nav">
+      <a href="#" class="close" onclick="closeSlideMenu();">
+        <i class="fas fa-times"></i>
+      </a>
+      <a href="index.html">Home</a>
+      <a href="upload.html">Upload</a>
+      <a href="info.html">Info</a>
+      <a href="data.html">Data</a>
+
+  </div>
+<div id="comp"data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
+    <img src="Images/Computer.png">
+</div>
+
+<div id="phone" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
+    <img src="Images/Phone.png">
+</div>
+
+<div id="tablet" data-aos="zoom-in-up" data-aos-duration="1500" data-aos-once="true">
+    <img src="Images/ipad.png">
+</div>
+
+<div id="greeting"data-aos="zoom-in" data-aos-duration="3000" data-aos-once="true" >
+    Welcome<br><br>
+    <img src="Images/heart.png">
+</div>
+
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+      
+      List();
+    </script>
+    <script>navBtn();</script>
+
+
+
+</body>
+</html>

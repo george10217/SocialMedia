@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Social Media &copy; | Upload</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /><!--this is where the Animation on Scroll is linked from the internet-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!--this is where the styles for the AOS is linked-->
+     <link rel="shortcut icon" type = image/png href="Images/webTab.png"> <!--adds logo to webpage tab-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!--links to jQuery-->
+    <script type= "text/javascript" src="js/script.js"></script><!this is where the external javascript file is linked>
+
+
+    
+</head>
+
+
+
+<body bgcolor=#00aec1>
+    <img id=logo src="Images/SMicon.png"style="width:300px; left:40%; position:absolute; margin-top: -5px;"data-aos="zoom-in-down" data-aos-duration="1500" data-aos-once="true"><!--Centre Company Logo-->
+
+
+<div id="menucont">
+
+<span class="slide">
+      <a href="#" onclick="openSlideMenu();">
+    <img id=navButton src="Images/barIcon.png"data-aos="fade-right" data-aos-duration="3500" data-aos-once="true" style="width:50px; cursor:pointer; -moz-transition: transform 1s;-webkit-transition: transform 1s;transition: transform 1s; margin-top: 5px; position: absolute;"><!--Three Line button-->
+
+      </a>
+    </span>
+<div id="menu" class="nav">
+      <a href="#" class="close" onclick="closeSlideMenu();">
+        <i class="fas fa-times"></i>
+      </a>
+      <a href="index.html">Home</a>
+      <a href="upload.html">Upload</a>
+      <a href="info.html">Info</a>
+      <a href="data.html">Data</a>
+
+
+  </div>
+
+<script language = "Javascript">
+	function loadFileAsText(){
+	  var myFile = document.getElementById("myFile").files[0];
+	  var fileReader = new FileReader();
+	  fileReader.onload = function(fileLoadedEvent){
+		  var textFromFileLoaded = fileLoadedEvent.target.result;
+		  document.getElementById("inputTextToSave").value = textFromFileLoaded;
+	  }
+	  fileReader.readAsText(myFile, "UTF-8");
+	}
+	
+	function savefile(){
+		var content = document.getElementById("inputTextToSave").value + " - 'Social Media ©'";
+		uriContent = "data:application/octet-stream," + encodeURIComponent(content);
+		document.getElementById("dlink").innerHTML = "<button href=" + uriContent + "download=\"SavedData.txt\">Download</button>";
+	}
+	</script>
+</head>
+
+<div id="uploadBox" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
+    <h3>Upload data:</h3>
+    <p>First, pick a file, for example a '.txt' file containing data.</p>
+	<input type="file" id="myFile">
+	<p>Then click 'Read' to read the file's data and content.</p>
+    <button onclick="loadFileAsText()">Read</button><br>
+	<h1>Content of loaded file</h1>
+    <p>You can edit data below and save it using the 'save' button.</p><br>
+	<textarea id="inputTextToSave"></textarea> <br>
+	<h1>Save the file</h1>
+	<button onclick="savefile()">Save</button>
+	<p id="dlink">Click save button to generate download link.</p>
+    
+    <img id="saveImg" src="images/datamine.png">
+</div>
+
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+      
+      List();
+    </script>
+    
+    <script>navBtn();</script>
+
+</body>
+</html>

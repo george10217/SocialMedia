@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Social Media &copy; | Data</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /><!--this is where the Animation on Scroll is linked from the internet-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!--this is where the styles for the AOS is linked-->
+     <link rel="shortcut icon" type = image/png href="Images/webTab.png"> <!--adds logo to webpage tab-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!--links to jQuery-->
+    <script type="text/javascript" src="js/script.js"></script><!--this is where an external javascript file is linked-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
+</head>
+
+
+
+<body>
+    <img id=logo src="Images/SMicon.png"style="width:300px; left:40%; position:absolute; margin-top: -5px;"data-aos="zoom-in-down" data-aos-duration="1500" data-aos-once="true"><!--Centre Company Logo-->
+
+
+<div id="menucont">
+
+<span class="slide">
+      <a href="#" onclick="openSlideMenu();">
+    <img id=navButton src="Images/barIcon.png"data-aos="fade-right" data-aos-duration="3500" data-aos-once="true" style="width:50px; cursor:pointer; -moz-transition: transform 1s;-webkit-transition: transform 1s;transition: transform 1s; margin-top: 5px; position: absolute;"><!--Three Line button-->
+
+      </a>
+    </span>
+<div id="menu" class="nav">
+      <a href="#" class="close" onclick="closeSlideMenu();">
+        <i class="fas fa-times"></i>
+      </a>
+      <a href="index.html">Home</a>
+      <a href="upload.html">Upload</a>
+      <a href="info.html">Info</a>
+      <a href="data.html">Data</a>
+
+
+  </div>
+
+    <div id="title1" data-aos="zoom-in-down" data-aos-duration="1500" data-aos-once="true">Data</div>
+    <div id="dataWelcome" data-aos="zoom-in-down" data-aos-duration="1500" data-aos-once="true">Scroll Down to view statistics gathered by 'Social Media' &copy;</div>
+    <br>
+    <div id="Caption1"data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
+        Based on what is obvious it appears that the major social media companies in society are popular amongst the younger demographic
+        of the school teenagers. What is currently happening in most high schools is students at a young age are exposed to social media and become addicted
+        early. They then continue to use social media as they go through high school. Based off the data collected from the graph it appears Instagram is the
+         most popular social media used among this young demographic
+        
+        
+    </div>
+    <div id="Charts1" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
+<canvas id="Chart1" width= 700 height= 500 ></canvas>
+</div>
+<script>
+var ctx = document.getElementById('Chart1').getContext('2d');
+var Chart2 = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Facebook', 'Discord', 'Snapchat', 'Twitter', 'Instagram', 'Tik Tok', 'Reddit', 'Youtube', 'Other', 'None'],
+        datasets: [{
+            label: 'Reasons',
+            data: [32, 48, 107, 13, 99, 46, 11, 9, 20, 9 ],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(155, 459, 64, 0.2)',
+                'rgba(5, 159, 64, 0.2)',
+                'rgba(245, 159, 64, 0.2)',
+                'rgba(255, 19, 24, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(155, 459, 64, 1)',
+                'rgba(5, 159, 64, 1)',
+                'rgba(245, 159, 64, 1)',
+                'rgba(255, 19, 24, 1)'
+            ],
+            borderWidth: 1
+        }]
+     },
+      options:{
+        title:{
+          display:true,
+          text:'Which social media platform(s) do you use the most?',
+          fontSize:25
+        },
+        legend:{
+          display:true,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,              
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+</script>
+<div id="Charts2" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
+   <div id="Caption2"data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">This is where social media can be used as a tool to create
+   profit for a large business. Based from the survey sent out to the students it does appear that social media is used for personal
+   uses rather than work (see graph 4). This is the best combination for a company to target the young demographic because
+   they could be easily distracted because they’re not concentration on any work at all instead using social media to express
+   themselves and for personal reasons. </div>
+<canvas id="Chart2" width= 700 height= 500></canvas>
+</div>
+<script>
+var ctx = document.getElementById('Chart2').getContext('2d');
+var Chart3 = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Personal', 'Both', 'Wokr/School'],
+        datasets: [{
+            label: 'Reasons',
+            data: [135, 53, 6],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)'
+    
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)'
+
+            ],
+            borderWidth: 1
+        }]
+     },
+      options:{
+        title:{
+          display:true,
+          text:'Is the time you spend on social media for Work / School purposes or personal use?',
+          fontSize:25
+        },
+        legend:{
+          display:true,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,              
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+</script>
+<div id="Caption3"data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
+Through the data collected it can also be concluded that big internet personalities do contribute to
+people’s decision to buying things off the internet or signing up to a service. As a majority of people do think that internet celebrities can be
+used to make sponsorships and used to market prodcuts, this would help by creating more awareness of the prodcut and thus gaining more attention </div>
+<div id="Charts3" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
+<canvas id="Chart3" width= 700 height= 500></canvas>
+</div>
+<script>
+var ctx = document.getElementById('Chart3').getContext('2d');
+var Chart3 = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Yes', 'No'],
+        datasets: [{
+            label: 'Reasons',
+            data: [110, 94,],
+            backgroundColor: [
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(155, 459, 64, 0.2)'
+
+    
+            ],
+            borderColor: [
+                'rgba(255, 159, 64, 1)',
+                'rgba(155, 459, 64, 1)'
+    
+
+            ],
+            borderWidth: 1
+        }]
+     },
+      options:{
+        title:{
+          display:true,
+          text:'Would you say that social media influences (YouTubers, Internet personalities etc.) influence your purchases?',
+          fontSize:20
+        },
+        legend:{
+          display:true,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,              
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+</script>
+<div id="Charts4" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
+<div id="Caption4"data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
+    A predictive model  can be created that can estimate based on off the number of the students that have social media
+    and using a rate of how much that number can increase each year. Based of research conducted the
+    percentage of teenaged students that have social media has increased from 2012 to 2019 to 70%.Through using the initial number
+    of students with social media which is 180 an exponential function (180(1.7)^t) 
+. This can give a rough estimate to how many students in total over the years will most likely have social media including
+students who will graduate from school.
+
+</div>
+<canvas id="Chart4" width= 700 height= 500></canvas>
+</div>
+<script>
+var ctx = document.getElementById('Chart4').getContext('2d');
+var Chart3 = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8'],
+        datasets: [{
+            label: 'No.users',
+            
+            data: [180, 306, 520.5, 884.34, 1503.37, 2555.75, 4344.76,7386.09, 12556.36, 21345.81],
+            backgroundColor: [
+                'rgba(44, 130, 201, 0.2)',
+                'rgba(44, 130, 201, 0.2)'
+
+    
+            ],
+            borderColor: [
+                'rgba(44, 130, 201, 1)',
+                'rgba(44, 130, 201, 1)'
+    
+
+            ],
+            borderWidth: 0.5
+        }]
+     },
+      options:{
+        scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Years'
+						}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'No. users'
+						}
+					}]
+				},
+        title:{
+          display:true,
+          text:'Growth of social media users in students',
+          fontSize:20
+        },
+        legend:{
+          display:true,
+          position:'centre',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:0,              
+            right:0,
+            bottom:0,
+            top:0
+          }
+          
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+</script>
+<br>
+<h3 data-aos="zoom-in-up" data-aos-duration="2000" data-aos-once="true" >Facebook Stock index:</h3>
+    <div id="stocktxt" data-aos="zoom-in-up">You can also use the stock market to profit from social media, investing in big companies such
+    as Facebook shares can help you gain net profits to invest into your business. So even if you choose not to use social
+    media to promote your business, you can still invest into some shares to make some profit to re-invest into your company.</div>
+<div id="datainput"data-aos="zoom-in-up" data-aos-duration="2000" data-aos-once="true" >
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_5c3b7"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-FB/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "width": 980,
+  "height": 610,
+  "symbol": "NASDAQ:FB",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "light",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "allow_symbol_change": true,
+  "container_id": "tradingview_5c3b7"
+}
+  );
+  </script>
+</div>
+<!-- TradingView Widget END --></div>
+
+
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+      
+      List();
+    </script>
+    <script>navBtn();</script>
+
+</body>
+</html>
